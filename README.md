@@ -713,7 +713,7 @@ Getting the sources locally
 
         * Use git checkout to switch to a more stable branch or tag:
 
-                $ git checkout 5.2.0
+                $ git checkout 5.2.0.Final
 
 Working with git
 ----------------
@@ -853,7 +853,6 @@ Writing documentation
                 * To avoid committing backups to source control.
 
                 * Source control history is better than backups.
-            
 
 * To generate the html and pdf output run maven with `-Dfull`:
 
@@ -864,6 +863,11 @@ Writing documentation
         $ firefox target/docbook/publish/en-US/html_single/index.html
 
 * **[Read and follow the documentation guidelines](documentation-guidelines.txt).**
+
+* The Drools Expert manual uses railroad diagrams.
+    
+    These are generated from a BNF file into images files with the application
+    [Ebnf2ps, Automatic Railroad Diagram Drawing](http://www.informatik.uni-freiburg.de/~thiemann/haskell/ebnf2ps/)
 
 Releasing
 =========
@@ -912,7 +916,7 @@ If everything is perfect (tested by QA etc):
 
 * Create the tag:
 
-        $ droolsjbpm-build-bootstrap/script/branches/create-tags.sh 5.2.0 5.1.0
+        $ droolsjbpm-build-bootstrap/script/branches/create-tags.sh 5.2.0.Final 5.1.0.Final
 
 * Deploy the artifacts:
 
