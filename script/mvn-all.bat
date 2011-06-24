@@ -39,6 +39,7 @@ for /F %%r in ('type %scriptDir%\repository-list.txt') do (
             echo maven failed: %mvnReturnCode%
             goto :end
         )
+        pause
     ) else (
         echo ===============================================================================
         echo Missing Repository: %%r. Skipping
@@ -55,6 +56,7 @@ cd %workingDir%
 
 echo.
 echo Total time: %spentSeconds%s
+goto:eof
 
 :initializeWorkingDirAndScriptDir 
     rem Set working directory and remove all symbolic links
